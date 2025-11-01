@@ -11,6 +11,7 @@ t_node	*create_new_node(int i)
 	return (new_node);
 }
 
+//checar esse role, ver der fazer sem criar um novo só mexeno posição
 void	insert_node_at_tail(int numb, t_node **head)
 {
 	t_node	*newNode;
@@ -29,9 +30,21 @@ void	insert_node_at_tail(int numb, t_node **head)
 	newNode->prev = temp;
 }
 
-t_node	*detach_node(t_node **head, t_node *node_to_isolate??)
+t_node	*detach_first(t_node **head)
 {
-	t_node *alone_node;
+	t_node	*first_alone;
 
+	first_alone = *head;
+	if (!*head)
+		return (NULL);
+	*head = (*head)->next;
+	(*head)->prev = NULL;
+	first_alone->prev = NULL;
+	first_alone->next = NULL;
+	return (first_alone);
+}
+
+t_node	*detach_last(t_node **head)
+{
 	
 }
