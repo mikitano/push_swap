@@ -6,7 +6,7 @@
 /*   By: mkitano <mkitano@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 09:57:55 by mkitano           #+#    #+#             */
-/*   Updated: 2025/11/02 11:11:24 by mkitano          ###   ########.fr       */
+/*   Updated: 2025/11/02 17:51:57 by mkitano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,17 @@ int		ft_insert_node_at(t_dlist *lst, t_node *node, size_t index);
 void	ft_delete_one(t_node *to_delete, void (*del)(void*));
 void	ft_clear_all_nodes(t_dlist *lst, void (*del)(void*));
 void	ft_destroy_dlst(t_dlist **lst, void (*del)(void*));
+
+void	sa(t_dlist *stack_a, t_node *to_move, int print);
+void	sb(t_dlist *stack_b, t_node *to_move, int print);
+void	ss(t_dlist *stack_a, t_dlist *stack_b, t_node *node_a, t_node *node_b);
+void	pa(t_dlist *stack_a, t_dlist *stack_b, t_node *to_move);
+void	pb(t_dlist *stack_b, t_dlist *stack_a, t_node *to_move);
+void	ra(t_dlist *stack_a, t_node *to_move, int print);
+void	rb(t_dlist *stack_b, t_node *to_move, int print);
+void	rr(t_dlist *stack_a, t_dlist *stack_b, t_node *node_a, t_node *node_b);
+void	rra(t_dlist *stack_a, t_node *to_move, int print);
+void	rrb(t_dlist *stack_b, t_node *to_move, int print);
+void	rrr(t_dlist *stack_a, t_dlist *stack_b, t_node *node_a, t_node *node_b);
 
 #endif
