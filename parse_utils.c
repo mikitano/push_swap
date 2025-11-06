@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   parse_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkitano <mkitano@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 19:33:03 by mkitano           #+#    #+#             */
-/*   Updated: 2025/11/06 19:42:35 by mkitano          ###   ########.fr       */
+/*   Created: 2025/11/06 19:56:06 by mkitano           #+#    #+#             */
+/*   Updated: 2025/11/06 20:21:13 by mkitano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+int	ft_valid_number(char *str)
 {
-	t_dlist	*stack_a;
-	t_dlist	*stack_b;
+	int	i;
 
-	if (argc < 2)
+	i = 0;
+	if (str[i] == '-' || str[i] == '+')
+		i++;
+	if (!str[i])
 		return (0);
-	stack_a = ft_dlist_initi();
-	stack_b = ft_dlist_initi();
-
-	// add velidação e sorting
-
-	ft_destroy_dlst(&stack_a, free);
-	ft_destroy_dlst(stack_b, free);
-	return (0);
+	while (str[i])
+	{
+		if (str[i] < '0' || str[i] > '9')
+			return (0);
+		i++;
+	}
+	return (1);
 }

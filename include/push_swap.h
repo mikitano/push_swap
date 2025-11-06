@@ -6,7 +6,7 @@
 /*   By: mkitano <mkitano@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 09:57:55 by mkitano           #+#    #+#             */
-/*   Updated: 2025/11/06 18:10:18 by mkitano          ###   ########.fr       */
+/*   Updated: 2025/11/06 19:05:12 by mkitano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,14 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdbool.h>
 
 # include "libft.h"
 
 typedef struct s_node
 {
 	void			*data;
+	int				*index;
 	struct s_node	*next;
 	struct s_node	*prev;
 }					t_node;
