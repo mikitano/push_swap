@@ -21,7 +21,7 @@ ARFLAGS := crs
 
 CCFLAGS := -Wall -Wextra -Werror
 DEPFLAGS := -MMD -MP
-CPPFLAGS := -I include -I src/core -I src/gnl
+CPPFLAGS := -I include -I src/core -I src/gnl -I src/printf
 
 RM = rm
 RMFLAGS = -rf
@@ -93,7 +93,7 @@ $(NAME) : $(OBJECTS_ALL)
 
 $(OBJ_DIR)/%.o : $(SRC_DIR)/%.c
 	@mkdir -p $(dir $@)
-	@$(CC) $(CCFLAGS) -c $< -o $@
+	@$(CC) $(CCFLAGS) $(DEPFLAGS) $(CPPFLAGS) -c $< -o $@
 
 clean :
 	@$(RM) $(RMFLAGS) $(OBJ_DIR)

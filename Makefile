@@ -43,14 +43,14 @@ $(LIBFT) :
 		@echo "[\033[0;33m...\033[0m] CREATING libft..."
 		@$(MAKE) -C $(LIBFT_DIR) --silent
 
-$(OBJ_DIR)/.%o : $(SRC_DIR)/.%c $(HEADERS)
+$(OBJ_DIR)/%.o : $(SRC_DIR)/%.c $(HEADERS)
 		@mkdir -p $(OBJ_DIR)
-		$(CC) $(CCFLAGS) $(IFLAGS) -c -$< -o -$@
+		$(CC) $(CCFLAGS) $(IFLAGS) -c $< -o $@
 		@echo "[\033[0;32mOK\033[0m] COMPILED $<!"
 
 clean :
 		@$(RM) $(RMFLAGS) $(OBJ_DIR)
-		@$(MAKE) -C $(LIBFT_DIR) clean -- silent
+		@$(MAKE) -C $(LIBFT_DIR) clean --silent
 		@echo "[\033[0;32mOK\033[0m] CLEAR files!"
 
 fclean : clean

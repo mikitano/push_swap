@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdio.h>
+#include <stdint.h>
 
 void	ft_print(t_node *head)
 {
@@ -20,7 +22,7 @@ void	ft_print(t_node *head)
 	printf("Foward: ");
 	while (temp)
 	{
-		printf("%d", temp->data);
+		printf("%d", (int)(intptr_t)temp->data);
 		temp = temp->next;
 	}
 	printf("\n");
@@ -35,11 +37,11 @@ int	main(void)
 	t_node	*tmp2;
 	t_node	*tmp3;
 
-	stack_a = ft_dlist_initi;
-	stack_b = ft_dlist_initi;
-	tmp1 = ft_new_node(10);
-	tmp2 = ft_new_node(42);
-	tmp3 = ft_new_node(2);
+	stack_a = ft_dlist_initi();
+	stack_b = ft_dlist_initi();
+	tmp1 = ft_new_node((void *)10);
+	tmp2 = ft_new_node((void *)42);
+	tmp3 = ft_new_node((void *)2);
 	tmp1->next = tmp2;
 	tmp2->prev = tmp1;
 	tmp2->next = tmp3;
@@ -47,5 +49,6 @@ int	main(void)
 	stack_a->head = tmp1;
 	stack_a->tail = tmp3;
 	stack_a->size = 3;
-	ft_print(temp1);
+	ft_print(tmp1);
+	return (0);
 }

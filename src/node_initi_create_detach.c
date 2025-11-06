@@ -22,6 +22,7 @@ t_dlist	*ft_dlist_initi(void)
 	d_list->head = NULL;
 	d_list->tail = NULL;
 	d_list->size = 0;
+	return (d_list);
 }
 
 t_node	*ft_new_node(void *data)
