@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap_functions.c                                   :+:      :+:    :+:   */
+/*   swap_operations.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkitano <mkitano@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 13:20:35 by mkitano           #+#    #+#             */
-/*   Updated: 2025/11/02 14:31:37 by mkitano          ###   ########.fr       */
+/*   Updated: 2025/11/06 17:10:33 by mkitano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	sa(t_dlist *stack_a, t_node *to_move, int print)
 	if (!stack_a || !to_move || stack_a->size == 1)
 		return ;
 	ft_detach(stack_a, to_move);
-	ft_insert_node_at(stack_a, to_move, 2);
+	ft_insert_node_at(stack_a, to_move, 1);
 	if (print)
 		ft_putstr_fd("sa\n", 1);
 }
@@ -27,7 +27,7 @@ void	sb(t_dlist *stack_b, t_node *to_move, int print)
 	if (!stack_b || !to_move || stack_b->size == 1)
 		return ;
 	ft_detach(stack_b, to_move);
-	ft_insert_node_at(stack_b, to_move, 2);
+	ft_insert_node_at(stack_b, to_move, 1);
 	if (print)
 		ft_putstr_fd("sb\n", 1);
 }

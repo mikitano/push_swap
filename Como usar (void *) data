@@ -1,0 +1,30 @@
+int	*n1;
+int	*n2;
+int	*n3;
+
+n1 = malloc(sizeof(int));
+n2 = malloc(sizeof(int));
+n3 = malloc(sizeof(int));
+if (!n1 || !n2 || !n3)
+	return (1); // trata erro
+
+*n1 = 11;
+*n2 = 22;
+*n3 = 33;
+
+tmp1 = ft_new_node(n1);
+tmp2 = ft_new_node(n2);
+tmp3 = ft_new_node(n3);
+
+
+printf("%d\n", *(int *)node->data);
+ou
+int	value = *(int *)node->data;
+
+| Objetivo                             | Como fazer                                         |
+| ------------------------------------ | -------------------------------------------------- |
+| Guardar números inteiros em `void *` | Alocar `int *n = malloc(sizeof(int)); *n = valor;` |
+| Passar pro nó                        | `ft_new_node(n)`                                   |
+| Acessar depois                       | `*(int *)node->data`                               |
+| Liberar sem segfault                 | `ft_destroy_dlst(&stack, free)`                    |
+
