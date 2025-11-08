@@ -11,12 +11,12 @@ bool	parse_args(t_dlist *stack_a, int argc, char **argv)
 {
 	char	**split;
 	int		i;
-	int		j = 1;
+	int		j = 0;
 	long	num;
 
-	while (j++ <= argc)
+	while (++j < argc)
 	{
-		split = ft_split(argv[argc], ' ');
+		split = ft_split(argv[j], ' ');
 		if (!split)
 			return (false);
 		i = 0;
@@ -33,6 +33,54 @@ bool	parse_args(t_dlist *stack_a, int argc, char **argv)
 			i++;
 		}
 		free_split(split);
+	}
+	return (true);
+}
+
+#include "push_swap.h"
+
+static bool	ft_validations(t_dlist *stack_a, char *str);
+static bool	ft_process_split(t_dlist *stack_a, char **split);
+
+bool	parse_and_fill(t_dlist *stack_a, int argc, char **argv)
+{
+	char	**split;
+	int		j;
+
+	j = 0;
+	while (++j < argc)
+	{
+		split = ft_split(argv[j], ' ');
+		if (!split)
+			return (false);
+		if (!ft_process_split(stack_a, split))
+		{
+			ft_free_split(split);
+			return (false);
+		}
+		ft_free_split(split);
+	}
+	return (true);
+}
+
+
+static bool	ft_process_args(t_dlist *stack_a, char **split)
+{
+	long	num;
+	int		i;
+
+	i = 0;
+	while (split[i])
+	{
+		if (!ft_valid_number(split[i]))
+			return (false);
+		num = ft_atol(split[i]);
+		if (num < INT_MIN || num > INT_MAX)
+			return (false);
+		if (has_duplicate(stack_a, (int)num))
+			return (false);
+		fill_stack(stack_a, (int)num);
+		i++;
 	}
 	return (true);
 }

@@ -6,7 +6,7 @@
 /*   By: mkitano <mkitano@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 09:57:55 by mkitano           #+#    #+#             */
-/*   Updated: 2025/11/06 19:05:12 by mkitano          ###   ########.fr       */
+/*   Updated: 2025/11/08 18:03:40 by mkitano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,13 @@ void	rr(t_dlist *stack_a, t_dlist *stack_b, t_node *node_a, t_node *node_b);
 void	rra(t_dlist *stack_a, t_node *to_move, int print);
 void	rrb(t_dlist *stack_b, t_node *to_move, int print);
 void	rrr(t_dlist *stack_a, t_dlist *stack_b, t_node *node_a, t_node *node_b);
+
+int		ft_valid_number(char *str);
+long	ft_atol(const char *str);
+bool	ft_is_duplicate(t_dlist *stack_a, int nbr);
+bool	ft_fill_stack(t_dlist *stack_a, int nbr);
+bool	ft_parse_and_fill(t_dlist *stack_a, int argc, char **argv);
+
+void	ft_free_split(char **split);
 
 #endif

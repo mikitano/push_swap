@@ -6,11 +6,25 @@
 /*   By: mkitano <mkitano@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 19:33:03 by mkitano           #+#    #+#             */
-/*   Updated: 2025/11/06 19:42:35 by mkitano          ###   ########.fr       */
+/*   Updated: 2025/11/08 18:44:44 by mkitano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+/*#include <stdio.h>
+static void	ft_print(void *head)
+{
+	t_node	*temp;
+
+	temp = head;
+	while (temp)
+	{
+		printf("%d ", *(int *)temp->data);
+		temp = temp->next;
+	}
+	printf("\n");
+}*/
 
 int	main(int argc, char **argv)
 {
@@ -18,17 +32,22 @@ int	main(int argc, char **argv)
 	t_dlist	*stack_b;
 
 	if (argc < 2)
-		return (0);
+		return (1);
 	stack_a = ft_dlist_initi();
+	if (!stack_a)
+		return (1);
 	stack_b = ft_dlist_initi();
-
-<<<<<<< HEAD
-	// add validação e sorting
-=======
-	// add velidação e sorting
->>>>>>> 5357154cf0b094c9c09324c33a480c664c020071
-
+	if (!stack_b)
+		return (1);
+	if (!ft_parse_and_fill(stack_a, argc, argv))
+	{
+		ft_destroy_dlst(&stack_a, free);
+		ft_destroy_dlst(&stack_b, free);
+		write(2, "Error\n", 6);
+		exit (1);
+	}
+	//ft_print(stack_a->head);
 	ft_destroy_dlst(&stack_a, free);
-	ft_destroy_dlst(stack_b, free);
+	ft_destroy_dlst(&stack_b, free);
 	return (0);
 }
