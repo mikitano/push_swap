@@ -45,8 +45,8 @@ $(LIBFT) :
 
 $(OBJ_DIR)/%.o : $(SRC_DIR)/%.c $(HEADERS)
 		@mkdir -p $(OBJ_DIR)
-		$(CC) $(CCFLAGS) $(IFLAGS) -c $< -o $@
-		@echo "[\033[0;32mOK\033[0m] COMPILED $<!"
+		@$(CC) $(CCFLAGS) $(IFLAGS) -c $< -o $@
+		@echo "[\033[0;32mOK\033[0m] COMPILED $<"
 
 clean :
 		@$(RM) $(RMFLAGS) $(OBJ_DIR)

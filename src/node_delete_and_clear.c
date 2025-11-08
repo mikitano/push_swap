@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   delete_and_clear_node_list.c                       :+:      :+:    :+:   */
+/*   node_delete_and_clear.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkitano <mkitano@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 17:28:40 by mkitano           #+#    #+#             */
-/*   Updated: 2025/11/01 17:33:47 by mkitano          ###   ########.fr       */
+/*   Updated: 2025/11/06 19:37:30 by mkitano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_delete_one(t_node *to_delete, void (*del)(void*))
+static void	ft_delete_one(t_node *to_delete, void (*del)(void*))
 {
 	if (!to_delete)
 		return ;
@@ -21,7 +21,7 @@ void	ft_delete_one(t_node *to_delete, void (*del)(void*))
 	free(to_delete);
 }
 
-void	ft_clear_all_nodes(t_dlist *lst, void (*del)(void*))
+static void	ft_clear_all_nodes(t_dlist *lst, void (*del)(void*))
 {
 	t_node	*current;
 	t_node	*temp_next;

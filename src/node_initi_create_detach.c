@@ -55,4 +55,3 @@ t_node	*ft_detach(t_dlist *lst, t_node *node_to_detach)
 	node_to_detach->prev = NULL;
 	return (node_to_detach);
 }
-
