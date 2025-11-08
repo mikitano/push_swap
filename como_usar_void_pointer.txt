@@ -27,3 +27,4 @@ int	value = *(int *)node->data;
 | Passar pro nó                        | `ft_new_node(n)`                                   |
 | Acessar depois                       | `*(int *)node->data`                               |
 | Liberar sem segfault                 | `ft_destroy_dlst(&stack, free)`                    |
+

@@ -34,3 +34,4 @@ void	parse_args(t_dlist *stack_a, int argc, char **argv)
 		free_split(split);
 	}
 }
+

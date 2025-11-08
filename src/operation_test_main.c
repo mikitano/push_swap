@@ -105,4 +105,8 @@ int	main(void)
 	ft_destroy_dlst(&stack_a, NULL);
 	ft_destroy_dlst(&stack_b, NULL);
 	return (0);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 5357154cf0b094c9c09324c33a480c664c020071

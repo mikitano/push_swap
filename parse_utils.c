@@ -28,4 +28,8 @@ int	ft_valid_number(char *str)
 		i++;
 	}
 	return (1);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 5357154cf0b094c9c09324c33a480c664c020071

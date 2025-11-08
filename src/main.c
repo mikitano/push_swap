@@ -22,7 +22,11 @@ int	main(int argc, char **argv)
 	stack_a = ft_dlist_initi();
 	stack_b = ft_dlist_initi();
 
+<<<<<<< HEAD
 	// add validação e sorting
+=======
+	// add velidação e sorting
+>>>>>>> 5357154cf0b094c9c09324c33a480c664c020071
 
 	ft_destroy_dlst(&stack_a, free);
 	ft_destroy_dlst(stack_b, free);
