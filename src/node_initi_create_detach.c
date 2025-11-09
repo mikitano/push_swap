@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   initi_create_detach_node.c                         :+:      :+:    :+:   */
+/*   node_initi_create_detach.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkitano <mkitano@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 09:57:42 by mkitano           #+#    #+#             */
-/*   Updated: 2025/11/01 17:34:28 by mkitano          ###   ########.fr       */
+/*   Updated: 2025/11/09 11:40:36 by mkitano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ t_node	*ft_new_node(void *data)
 	if (!new_node)
 		return (NULL);
 	new_node->data = data;
+	new_node->index = 0;
 	new_node->next = NULL;
 	new_node->prev = NULL;
 	return (new_node);

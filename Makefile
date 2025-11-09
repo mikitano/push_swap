@@ -17,7 +17,9 @@ SRC_FILES = main.c \
 	rotate_operations.c \
 	rrotate_operations.c \
 	parse_utils.c \
-	parsing_fill.c
+	parsing_fill.c\
+	sort.c \
+	sort_utils.c
 
 SRCS = $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRC_FILES:.c=.o)) 

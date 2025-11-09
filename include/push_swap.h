@@ -6,7 +6,7 @@
 /*   By: mkitano <mkitano@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 09:57:55 by mkitano           #+#    #+#             */
-/*   Updated: 2025/11/08 18:03:40 by mkitano          ###   ########.fr       */
+/*   Updated: 2025/11/09 17:19:49 by mkitano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 typedef struct s_node
 {
 	void			*data;
-	int				*index;
+	size_t			index;
 	struct s_node	*next;
 	struct s_node	*prev;
 }					t_node;
@@ -63,8 +63,14 @@ int		ft_valid_number(char *str);
 long	ft_atol(const char *str);
 bool	ft_is_duplicate(t_dlist *stack_a, int nbr);
 bool	ft_fill_stack(t_dlist *stack_a, int nbr);
+void	ft_free_split(char **split);
 bool	ft_parse_and_fill(t_dlist *stack_a, int argc, char **argv);
 
-void	ft_free_split(char **split);
+bool	ft_is_sorted(t_dlist *stack_a);
+void	ft_sort_two(t_dlist *stack_a);
+void	ft_sort_three(t_dlist *stack_a);
+void	ft_sort_five(t_dlist *stack_a, t_dlist *stack_b);
+
+void	ft_sort(t_dlist *stack_a, t_dlist *stack_b);
 
 #endif

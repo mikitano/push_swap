@@ -6,13 +6,13 @@
 /*   By: mkitano <mkitano@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 19:33:03 by mkitano           #+#    #+#             */
-/*   Updated: 2025/11/08 18:44:44 by mkitano          ###   ########.fr       */
+/*   Updated: 2025/11/09 15:14:52 by mkitano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/*#include <stdio.h>
+#include <stdio.h>
 static void	ft_print(void *head)
 {
 	t_node	*temp;
@@ -20,11 +20,11 @@ static void	ft_print(void *head)
 	temp = head;
 	while (temp)
 	{
-		printf("%d ", *(int *)temp->data);
+		printf("%d\n", *(int *)temp->data);
 		temp = temp->next;
 	}
 	printf("\n");
-}*/
+}
 
 int	main(int argc, char **argv)
 {
@@ -46,7 +46,8 @@ int	main(int argc, char **argv)
 		write(2, "Error\n", 6);
 		exit (1);
 	}
-	//ft_print(stack_a->head);
+	ft_sort(stack_a, stack_b);
+	ft_print(stack_a->head);
 	ft_destroy_dlst(&stack_a, free);
 	ft_destroy_dlst(&stack_b, free);
 	return (0);
