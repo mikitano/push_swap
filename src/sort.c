@@ -6,7 +6,7 @@
 /*   By: mkitano <mkitano@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 11:43:30 by mkitano           #+#    #+#             */
-/*   Updated: 2025/11/09 16:55:26 by mkitano          ###   ########.fr       */
+/*   Updated: 2025/11/09 18:12:29 by mkitano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ static void	ft_give_index(t_dlist *stack_a)
 
 void	ft_sort(t_dlist *stack_a, t_dlist *stack_b)
 {
-	stack_b = NULL;
 	ft_give_index(stack_a);
 	if (ft_is_sorted(stack_a))
 		return ;
@@ -51,11 +50,11 @@ void	ft_sort(t_dlist *stack_a, t_dlist *stack_b)
 		ft_sort_three(stack_a);
 		return ;
 	}
-	//else if (stack_a->size <= 5)
-	//{
-	//	ft_sort_five();
-	//	return ;
-	//}
+	else if (stack_a->size <= 5)
+	{
+		ft_sort_five(stack_a, stack_b);
+		return ;
+	}
 	//else
 	//	ft_radix(stack_a, stack_b);
 }

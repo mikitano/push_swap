@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mkitano <mkitano@student.42sp.org.br>      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/11/09 18:15:28 by mkitano           #+#    #+#              #
+#    Updated: 2025/11/09 18:15:36 by mkitano          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = push_swap
 EXEC = $(BIN_DIR)/$(NAME)
 
@@ -19,7 +31,8 @@ SRC_FILES = main.c \
 	parse_utils.c \
 	parsing_fill.c\
 	sort.c \
-	sort_utils.c
+	sort_utils.c \
+	sort_five_utils.c
 
 SRCS = $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRC_FILES:.c=.o)) 

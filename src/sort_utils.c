@@ -6,7 +6,7 @@
 /*   By: mkitano <mkitano@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 14:21:52 by mkitano           #+#    #+#             */
-/*   Updated: 2025/11/09 17:20:38 by mkitano          ###   ########.fr       */
+/*   Updated: 2025/11/09 19:24:04 by mkitano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,23 +68,14 @@ void	ft_sort_three(t_dlist *stack_a)
 		sa(stack_a, check, 1);
 }
 
-static t_node	*ft_min_to_top(t_dlist *stack_a)
-{
-
-}
-
 void	ft_sort_five(t_dlist *stack_a, t_dlist *stack_b)
 {
-	t_node	*small;
-	t_node	*tempb;
-
 	while (stack_a->size > 3)
 	{
-		small = ft_min_to_top(stack_a);
-		pb(stack_b, stack_a, small);
+		ft_min_to_top(stack_a);
+		pb(stack_b, stack_a);
 	}
 	ft_sort_three(stack_a);
-	tempb = stack_b->head;
 	while (stack_b->size > 0)
-		pa(stack_a, stack_b, tempb);
+		pa(stack_a, stack_b);
 }

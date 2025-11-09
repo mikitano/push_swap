@@ -6,7 +6,7 @@
 /*   By: mkitano <mkitano@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 09:57:55 by mkitano           #+#    #+#             */
-/*   Updated: 2025/11/09 17:19:49 by mkitano          ###   ########.fr       */
+/*   Updated: 2025/11/09 18:37:19 by mkitano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,8 @@ void	ft_destroy_dlst(t_dlist **lst, void (*del)(void*));
 void	sa(t_dlist *stack_a, t_node *to_move, int print);
 void	sb(t_dlist *stack_b, t_node *to_move, int print);
 void	ss(t_dlist *stack_a, t_dlist *stack_b, t_node *node_a, t_node *node_b);
-void	pa(t_dlist *stack_a, t_dlist *stack_b, t_node *to_move);
-void	pb(t_dlist *stack_b, t_dlist *stack_a, t_node *to_move);
+void	pa(t_dlist *stack_a, t_dlist *stack_b);
+void	pb(t_dlist *stack_b, t_dlist *stack_a);
 void	ra(t_dlist *stack_a, t_node *to_move, int print);
 void	rb(t_dlist *stack_b, t_node *to_move, int print);
 void	rr(t_dlist *stack_a, t_dlist *stack_b, t_node *node_a, t_node *node_b);
@@ -70,6 +70,7 @@ bool	ft_is_sorted(t_dlist *stack_a);
 void	ft_sort_two(t_dlist *stack_a);
 void	ft_sort_three(t_dlist *stack_a);
 void	ft_sort_five(t_dlist *stack_a, t_dlist *stack_b);
+void	ft_min_to_top(t_dlist *stack_a);
 
 void	ft_sort(t_dlist *stack_a, t_dlist *stack_b);
 
