@@ -55,6 +55,6 @@ void	ft_sort(t_dlist *stack_a, t_dlist *stack_b)
 		ft_sort_five(stack_a, stack_b);
 		return ;
 	}
-	//else
-	//	ft_radix(stack_a, stack_b);
+	else
+		ft_radix_bsort(stack_a, stack_b);
 }

@@ -72,6 +72,8 @@ void	ft_sort_three(t_dlist *stack_a);
 void	ft_sort_five(t_dlist *stack_a, t_dlist *stack_b);
 void	ft_min_to_top(t_dlist *stack_a);
 
+void	ft_radix_bsort(t_dlist *stack_a, t_dlist *stack_b);
+
 void	ft_sort(t_dlist *stack_a, t_dlist *stack_b);
 
 #endif

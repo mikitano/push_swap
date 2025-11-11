@@ -32,7 +32,8 @@ SRC_FILES = main.c \
 	parsing_fill.c\
 	sort.c \
 	sort_utils.c \
-	sort_five_utils.c
+	sort_five_utils.c \
+	radix_sort.c
 
 SRCS = $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRC_FILES:.c=.o)) 
