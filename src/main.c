@@ -32,7 +32,7 @@ int	main(int argc, char **argv)
 	t_dlist	*stack_b;
 
 	if (argc < 2)
-		return (1);
+		return (0);
 	stack_a = ft_dlist_initi();
 	if (!stack_a)
 		return (1);

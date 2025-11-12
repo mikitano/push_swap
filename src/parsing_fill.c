@@ -54,7 +54,7 @@ bool	ft_parse_and_fill(t_dlist *stack_a, int argc, char **argv)
 		splited = ft_split(argv[j], ' ');
 		if (!splited)
 			return (false);
-		if (argv[j][0] == '\0')
+		if (argv[j][0] == '\0' || !splited[0])
 		{
 			ft_free_split(splited);
 			return (false);
