@@ -17,10 +17,7 @@ bool	ft_is_sorted(t_dlist *stack_a)
 	t_node	*temp;
 
 	if (stack_a->size == 1)
-	{
-		write(1, "Already sorted\n", 15);
 		return (true);
-	}
 	temp = stack_a->head;
 	while (temp->next)
 	{
@@ -28,7 +25,6 @@ bool	ft_is_sorted(t_dlist *stack_a)
 			return (false);
 		temp = temp->next;
 	}
-	write(1, "Already sorted!\n", 15);
 	return (true);
 }
 

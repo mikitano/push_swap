@@ -15,20 +15,27 @@
 static bool	ft_process_args(t_dlist *stack_a, char **splited)
 {
 	int		i;
+	int		flag;
 	long	nbr;
 
 	i = 0;
+	flag = 0;
 	while (splited[i])
 	{
 		if (!ft_valid_number(splited[i]))
-			return (false);
+			flag = 1;
 		nbr = ft_atol(splited[i]);
 		if (nbr < MIN_INT || nbr > MAX_INT)
-			return (false);
+			flag = 1;
 		if (ft_is_duplicate(stack_a, (int)nbr))
-			return (false);
+			flag = 1;
 		if (!ft_fill_stack(stack_a, (int)nbr))
-			return (false);
+			flag = 1;
+		if (flag)
+		{
+			ft_free_split(splited);
+			return(false);
+		}
 		i++;
 	}
 	return (true);
@@ -53,10 +60,7 @@ bool	ft_parse_and_fill(t_dlist *stack_a, int argc, char **argv)
 			return (false);
 		}
 		if (!ft_process_args(stack_a, splited))
-		{
-			ft_free_split(splited);
 			return (false);
-		}
 		ft_free_split(splited);
 	}
 	return (true);
