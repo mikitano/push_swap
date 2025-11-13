@@ -38,7 +38,7 @@ int	main(int argc, char **argv)
 		return (1);
 	stack_b = ft_dlist_initi();
 	if (!stack_b)
-		return (1);
+		return (0);
 	if (!ft_parse_and_fill(stack_a, argc, argv))
 	{
 		ft_destroy_dlst(&stack_a, free);

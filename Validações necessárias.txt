@@ -1,7 +1,0 @@
-| Validação                                               | Exemplo de erro                   | O que fazer                    |
-| ------------------------------------------------------- | --------------------------------- | ------------------------------ |
-| 1. Argumentos são números válidos                       | `"1" "2" "a"`                     | printar `Error` e sair         |
-| 2. Não há **números duplicados**                        | `"2" "1" "2"`                     | `Error` e sair                 |
-| 3. Cabe dentro de um **int 32 bits**                    | `"2147483648"` ou `"-2147483649"` | `Error` e sair                 |
-| 4. Não há argumentos vazios ou espaços soltos           | `"   "`                           | `Error` e sair                 |
-| 5. Pode lidar com múltiplos números num único argumento | `"1 2 3"`                         | precisa separar com `ft_split` |
